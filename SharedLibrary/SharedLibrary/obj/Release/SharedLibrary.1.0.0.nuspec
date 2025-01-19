@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>SharedLibrary</id>
+    <version>1.0.0</version>
+    <authors>SharedLibrary</authors>
+    <description>Package Description</description>
+    <repository type="git" />
+    <dependencies>
+      <group targetFramework="net8.0">
+        <dependency id="MassTransit" version="8.3.4" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="C:\Users\Lakshitha\Downloads\Web Tech\SAGA Orchestration\SharedLibrary\SharedLibrary\bin\Release\net8.0\SharedLibrary.dll" target="lib\net8.0\SharedLibrary.dll" />
+  </files>
+</package>
