@@ -1,28 +1,30 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using MassTransit;
+using MassTransit.EntityFrameworkCoreIntegration;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using SharedLibrary.StateModels;
 
 namespace OrchestratorService.Saga
 {
-    public class OrderStateDbContext : DbContext
+    public class OrderStateDbContext : SagaDbContext
     {
         public OrderStateDbContext(DbContextOptions<OrderStateDbContext> options) : base(options) { }
 
-        public DbSet<OrderSagaState> OrderSagaStates { get; set; }
-
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        protected override IEnumerable<ISagaClassMap> Configurations
         {
-            base.OnModelCreating(modelBuilder);
+            get { yield return new OrderSagaClassMap(); }
+        }
+    }
 
-            // Configure the saga state model
-            modelBuilder.Entity<OrderSagaState>(entity =>
-            {
-                entity.HasKey(x => x.CorrelationId);
-                entity.Property(x => x.CurrentState);
-                entity.Property(x => x.OrderId);
-                entity.Property(x => x.CustomerEmail);
-                entity.Property(x => x.TotalPrice);
-                entity.Property(x => x.FailureReason);
-            });
+    public class OrderSagaClassMap : SagaClassMap<OrderSagaState>
+    {
+        protected override void Configure(EntityTypeBuilder<OrderSagaState> entity, ModelBuilder model)
+        {
+            entity.Property(x => x.CurrentState);
+            entity.Property(x => x.OrderId);
+            entity.Property(x => x.CustomerEmail);
+            entity.Property(x => x.TotalPrice);
+            entity.Property(x => x.FailureReason);
         }
     }
 }

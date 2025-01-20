@@ -1,6 +1,6 @@
 using MassTransit;
-using Microsoft.EntityFrameworkCore;
 using OrchestratorService.Saga;
+using Microsoft.EntityFrameworkCore;
 using SharedLibrary.StateModels;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -12,31 +12,26 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+// Add MassTransit
 builder.Services.AddMassTransit(config =>
 {
-    // Register the state machine with MassTransit
     config.AddSagaStateMachine<OrderStateMachine, OrderSagaState>()
-        .EntityFrameworkRepository(r =>
-        {
-            r.AddDbContext<OrderStateDbContext>((provider, options) =>
-            {
-                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
-            });
-        });
+          .EntityFrameworkRepository(r =>
+          {
+              r.ConcurrencyMode = ConcurrencyMode.Pessimistic;
+              r.AddDbContext<DbContext, OrderStateDbContext>((provider, options) =>
+              {
+                  options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"),
+                      sqlOptions => sqlOptions.MigrationsAssembly("OrchestratorService"));
+              });
+          });
 
-    // Set up the RabbitMQ host for MassTransit
     config.UsingRabbitMq((context, cfg) =>
     {
         cfg.Host("rabbitmq://localhost");
         cfg.ConfigureEndpoints(context);
     });
-}).AddMassTransitHostedService();
-
-// Add DbContext to DI container for saga persistence
-builder.Services.AddDbContext<OrderStateDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
-
-
+});
 
 var app = builder.Build();
 

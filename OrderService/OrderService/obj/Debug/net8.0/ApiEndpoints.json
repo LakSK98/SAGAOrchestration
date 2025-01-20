@@ -1,0 +1,18 @@
+[
+  {
+    "ContainingType": "OrderService.Controllers.OrderController",
+    "Method": "PlaceOrder",
+    "RelativePath": "api/Order",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "orderRequest",
+        "Type": "OrderService.Controllers.OrderRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
