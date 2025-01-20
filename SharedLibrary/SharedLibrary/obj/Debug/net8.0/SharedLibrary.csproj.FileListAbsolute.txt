@@ -10,3 +10,4 @@ C:\Users\Lakshitha\Downloads\Web Tech\SAGA Orchestration\SharedLibrary\SharedLib
 C:\Users\Lakshitha\Downloads\Web Tech\SAGA Orchestration\SharedLibrary\SharedLibrary\obj\Debug\net8.0\refint\SharedLibrary.dll
 C:\Users\Lakshitha\Downloads\Web Tech\SAGA Orchestration\SharedLibrary\SharedLibrary\obj\Debug\net8.0\SharedLibrary.pdb
 C:\Users\Lakshitha\Downloads\Web Tech\SAGA Orchestration\SharedLibrary\SharedLibrary\obj\Debug\net8.0\ref\SharedLibrary.dll
+C:\Users\Lakshitha\Downloads\Web Tech\SAGA Orchestration\SharedLibrary\SharedLibrary\obj\Debug\net8.0\SharedLibrary.sourcelink.json

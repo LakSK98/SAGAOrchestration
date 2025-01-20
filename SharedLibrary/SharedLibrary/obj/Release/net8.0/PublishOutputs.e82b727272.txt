@@ -1,0 +1,15 @@
+C:\Users\Lakshitha\Downloads\Web Tech\SAGA Orchestration\SharedLibrary\SharedLibrary\bin\Release\net8.0\publish\SharedLibrary.dll
+C:\Users\Lakshitha\Downloads\Web Tech\SAGA Orchestration\SharedLibrary\SharedLibrary\bin\Release\net8.0\publish\SharedLibrary.deps.json
+C:\Users\Lakshitha\Downloads\Web Tech\SAGA Orchestration\SharedLibrary\SharedLibrary\bin\Release\net8.0\publish\SharedLibrary.pdb
+C:\Users\Lakshitha\Downloads\Web Tech\SAGA Orchestration\SharedLibrary\SharedLibrary\bin\Release\net8.0\publish\MassTransit.dll
+C:\Users\Lakshitha\Downloads\Web Tech\SAGA Orchestration\SharedLibrary\SharedLibrary\bin\Release\net8.0\publish\MassTransit.Abstractions.dll
+C:\Users\Lakshitha\Downloads\Web Tech\SAGA Orchestration\SharedLibrary\SharedLibrary\bin\Release\net8.0\publish\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\Lakshitha\Downloads\Web Tech\SAGA Orchestration\SharedLibrary\SharedLibrary\bin\Release\net8.0\publish\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Lakshitha\Downloads\Web Tech\SAGA Orchestration\SharedLibrary\SharedLibrary\bin\Release\net8.0\publish\Microsoft.Extensions.Diagnostics.Abstractions.dll
+C:\Users\Lakshitha\Downloads\Web Tech\SAGA Orchestration\SharedLibrary\SharedLibrary\bin\Release\net8.0\publish\Microsoft.Extensions.Diagnostics.HealthChecks.dll
+C:\Users\Lakshitha\Downloads\Web Tech\SAGA Orchestration\SharedLibrary\SharedLibrary\bin\Release\net8.0\publish\Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions.dll
+C:\Users\Lakshitha\Downloads\Web Tech\SAGA Orchestration\SharedLibrary\SharedLibrary\bin\Release\net8.0\publish\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\Lakshitha\Downloads\Web Tech\SAGA Orchestration\SharedLibrary\SharedLibrary\bin\Release\net8.0\publish\Microsoft.Extensions.Hosting.Abstractions.dll
+C:\Users\Lakshitha\Downloads\Web Tech\SAGA Orchestration\SharedLibrary\SharedLibrary\bin\Release\net8.0\publish\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Lakshitha\Downloads\Web Tech\SAGA Orchestration\SharedLibrary\SharedLibrary\bin\Release\net8.0\publish\Microsoft.Extensions.Options.dll
+C:\Users\Lakshitha\Downloads\Web Tech\SAGA Orchestration\SharedLibrary\SharedLibrary\bin\Release\net8.0\publish\Microsoft.Extensions.Primitives.dll

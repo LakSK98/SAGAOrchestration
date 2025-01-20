@@ -9,6 +9,6 @@ namespace SharedLibrary.StateModels
         public Guid OrderId { get; set; }
         public string CustomerEmail { get; set; }
         public decimal TotalPrice { get; set; }
-        public string FailureReason { get; set; }
+        public string? FailureReason { get; set; }
     }
 }

@@ -32,9 +32,9 @@ namespace OrchestratorService.Saga
                     .TransitionTo(Completed)
                     .Publish(context => new OrderCompletedEvent(context.Saga.OrderId)),
                 When(PaymentFailureEvent)
-                    .Then(context => context.Saga.FailureReason = context.Message.Error)
+                    .Then(context => context.Saga.FailureReason = context.Message.Reason)
                     .TransitionTo(Failed)
-                    .Publish(context => new OrderFailedEvent(context.Saga.OrderId, context.Saga.FailureReason))
+                    .Publish(context => new OrderFailedEvent(context.Message.OrderId, context.Message.Reason))
             );
 
             SetCompletedWhenFinalized();
@@ -47,7 +47,7 @@ namespace OrchestratorService.Saga
 
         // Events
         public Event<OrderPlacedEvent> OrderPlacedEvent { get; private set; }
-        public Event<PaymentSuccessEvent> PaymentSuccessEvent { get; private set; }
-        public Event<PaymentFailureEvent> PaymentFailureEvent { get; private set; }
+        public Event<PaymentProcessedEvent> PaymentSuccessEvent { get; private set; }
+        public Event<PaymentFailedEvent> PaymentFailureEvent { get; private set; }
     }
 }

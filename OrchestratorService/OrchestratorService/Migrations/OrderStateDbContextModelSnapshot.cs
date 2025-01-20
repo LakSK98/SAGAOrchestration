@@ -36,7 +36,6 @@ namespace OrchestratorService.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("FailureReason")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<Guid>("OrderId")
